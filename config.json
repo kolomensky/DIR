@@ -1,0 +1,785 @@
+{
+      "add_sets": {
+            "device_mode": "ap",
+            "stb_vid": 555,
+            "stb_vlan": true,
+            "stbport": 1
+      },
+      "ddns": [],
+      "default_pass": false,
+      "default_ssid": {
+            "default_ssid_2.4": false,
+            "default_ssid_5.0": false
+      },
+      "dmz": {
+            "enable": false,
+            "ip": ""
+      },
+      "dns_list": [],
+      "httpaccess": [],
+      "httpd": {
+            "cert": "/etc/mini_httpd.pem",
+            "port": 80,
+            "use_ssl": true
+      },
+      "ifaces": {
+            "auto": {
+                  "is_wan": true,
+                  "services": {},
+                  "type": "auto"
+            },
+            "br0": {
+                  "enable": true,
+                  "services": {
+                        "br0": {
+                              "alias_ipv6": "fd00::1/8",
+                              "auto": true,
+                              "dhcp": false,
+                              "dhcpd": {
+                                    "addn_hostname": "dlinkap.local",
+                                    "dhcp6_pd": false,
+                                    "dns_relay": false,
+                                    "enable": false,
+                                    "enablev6": false,
+                                    "end_ip": "192.168.1.254",
+                                    "end_ipv6": "fd01::ffff:ffff:ffff:ffff",
+                                    "lease": 86400,
+                                    "leasev6": 86400,
+                                    "modev6": "0",
+                                    "reserved": [],
+                                    "start_ip": "192.168.1.3",
+                                    "start_ipv6": "fd01::2",
+                                    "gwip": "192.168.1.1",
+                                    "custom_opts": []
+                              },
+                              "enable": true,
+                              "iface": "br0",
+                              "ip": "192.168.1.2",
+                              "ipv6": "fd01::1/64",
+                              "mask": "255.255.255.0",
+                              "name": "LAN",
+                              "type": "ip",
+                              "useipv6": true,
+                              "connection_status": "Connected",
+                              "gwip": "192.168.1.1"
+                        }
+                  },
+                  "type": "bridge",
+                  "port": "Ports:1,2,3,4;WiFi:1,wifi_5G-"
+            },
+            "wan1": {
+                  "enable": true,
+                  "is_wan": true,
+                  "max_count": 2,
+                  "mtu": 1500,
+                  "port": "Ports:5",
+                  "services": {
+                        "wan1_1": {
+                              "auto": true,
+                              "contag": 1,
+                              "dhcp": true,
+                              "dns_from_dhcp": true,
+                              "enable": true,
+                              "firewall": true,
+                              "gwif": true,
+                              "gwip": "",
+                              "iface": "wan1",
+                              "igmp": true,
+                              "ip": "",
+                              "mask": "",
+                              "name": "WAN",
+                              "nat": true,
+                              "tunnels": {},
+                              "type": "ip",
+                              "vendor_id": "dslforum.org",
+                              "ddos": false,
+                              "connection_status": "Disconnected",
+                              "domain": ""
+                        }
+                  },
+                  "type": "ethernet",
+                  "default_mac": "0c:b6:d2:52:dc:d0"
+            }
+      },
+      "igmp": {
+            "enable": true,
+            "version": 2
+      },
+      "ipfilter": [],
+      "ipsec": {
+            "enabled": false,
+            "p1_cyphers": {
+                  "DES": "des"
+            },
+            "p1_digests": {
+                  "MD5": "md5",
+                  "SHA-1": "sha1"
+            },
+            "p1_groups": {
+                  "1": "modp768",
+                  "14": "modp2048",
+                  "15": "modp3072",
+                  "16": "modp4096",
+                  "17": "modp6144",
+                  "18": "modp8192",
+                  "2": "modp1024",
+                  "5": "modp1536"
+            },
+            "p2_cyphers": {
+                  "DES": "des"
+            },
+            "p2_digests": {
+                  "HMAC-MD5": "hmac_md5",
+                  "HMAC-SHA1": "hmac_sha1"
+            },
+            "p2_groups": {
+                  "1": "modp768",
+                  "14": "modp2048",
+                  "15": "modp3072",
+                  "16": "modp4096",
+                  "17": "modp6144",
+                  "18": "modp8192",
+                  "2": "modp1024",
+                  "5": "modp1536"
+            },
+            "tunnels": []
+      },
+      "lan": [
+            "br0"
+      ],
+      "macfilter": [],
+      "ntpclient": {
+            "enable": true,
+            "hour": "-3",
+            "servers": [
+                  "pool.ntp.org"
+            ],
+            "use_dhcp": false,
+            "run_as_serv": false,
+            "synced": true,
+            "init_synced": true
+      },
+      "phys_ifaces": {
+            "wifi": "rai0",
+            "wifi_2G": "ra0"
+      },
+      "ppp_inf": [],
+      "redirect": {
+            "enable": true,
+            "modules": {
+                  "cable": {
+                        "enable": true
+                  },
+                  "connections": {
+                        "enable": true
+                  },
+                  "factory": {
+                        "enable": true
+                  },
+                  "flashing": {
+                        "enable": true
+                  }
+            }
+      },
+      "redirectport": [],
+      "rip_route": {
+            "enable": true,
+            "version": "0"
+      },
+      "route": [],
+      "syslog": {
+            "enable": true,
+            "level": 6,
+            "port": 514,
+            "server": "",
+            "type": "local"
+      },
+      "telnet": {
+            "enable": false,
+            "port": 23
+      },
+      "tr069": {
+            "DeviceInfo": {
+                  "ProvisioningCode": ""
+            },
+            "authenticate": "0",
+            "debug_mode": "3",
+            "diagnostic": {
+                  "averageresponsetime": "",
+                  "datablocksize": "",
+                  "dscp": "",
+                  "failurecount": "",
+                  "interface": "",
+                  "maximumresponsetime": "",
+                  "minimumresponsetime": "",
+                  "numberofrepetitions": "",
+                  "pingip": "",
+                  "pingresult": "",
+                  "successcount": "",
+                  "timeout": ""
+            },
+            "enable": true,
+            "end_port": "9999",
+            "file_trans": [],
+            "getrpcmethodsenable": "0",
+            "managementserver": {
+                  "connectionrequestpassword": "",
+                  "connectionrequesturl": "http://192.168.0.1:8999/",
+                  "connectionrequestusername": "",
+                  "password": "",
+                  "periodicinformenable": "1",
+                  "periodicinforminterval": "120",
+                  "periodicinformtime": "0",
+                  "url": "",
+                  "username": "",
+                  "write_counter": 1
+            },
+            "max_envs": "",
+            "misc": {
+                  "previousurl": "",
+                  "rebootcmdkey": "",
+                  "schedulecmdkey": "",
+                  "wandevice": {
+                        "max_instance": 1,
+                        "1": {
+                              "av_iface_key": 1,
+                              "mio_id": "port5",
+                              "ipconn": {
+                                    "max_instance": 1,
+                                    "1": {
+                                          "av_iface_key": 11,
+                                          "mio_id": {
+                                                "vid": 0,
+                                                "conn_tag": 1
+                                          },
+                                          "PortMapping": {
+                                                "max_instance": 0
+                                          },
+                                          "SentDHCPOption": {
+                                                "max_instance": 1,
+                                                "1": {
+                                                      "Value": "dslforum.org",
+                                                      "Enable": true,
+                                                      "Tag": 60
+                                                }
+                                          }
+                                    }
+                              },
+                              "pppconn": {
+                                    "max_instance": 0
+                              },
+                              "ipv6conn": {
+                                    "max_instance": 0
+                              },
+                              "pppv6conn": {
+                                    "max_instance": 0
+                              }
+                        }
+                  },
+                  "max_instance": 11,
+                  "landevice": {
+                        "max_instance": 1,
+                        "1": {
+                              "mio_id": "lan",
+                              "av_iface_key": 2,
+                              "lan_eth_if_cfg": {
+                                    "max_instance": 4,
+                                    "1": {
+                                          "mio_id": "port1",
+                                          "av_iface_key": 3
+                                    },
+                                    "2": {
+                                          "mio_id": "port2",
+                                          "av_iface_key": 4
+                                    },
+                                    "3": {
+                                          "mio_id": "port3",
+                                          "av_iface_key": 5
+                                    },
+                                    "4": {
+                                          "mio_id": "port4",
+                                          "av_iface_key": 6
+                                    }
+                              },
+                              "WLANConfiguration": {
+                                    "max_instance": 4,
+                                    "1": {
+                                          "BeaconTypeHere": 0,
+                                          "BeaconTypevalue": "None",
+                                          "BasicAuthenticationMode": "None",
+                                          "BasicEncryptionModes": "None",
+                                          "WPAAuthenticationMode": "PSKAuthentication",
+                                          "WPAEncryptionModes": "TKIPEncryption",
+                                          "IEEE11iEncryptionModes": "AESEncryption",
+                                          "IEEE11iAuthenticationMode": "PSKAuthentication",
+                                          "mbssid_index": 0,
+                                          "mio_id": "ra0",
+                                          "wlan_port": "wifi_2G-1",
+                                          "av_iface_key": 7,
+                                          "WLANCli": {
+                                                "max_instance": 0
+                                          }
+                                    },
+                                    "2": {
+                                          "BeaconTypeHere": 0,
+                                          "BeaconTypevalue": "None",
+                                          "BasicAuthenticationMode": "None",
+                                          "BasicEncryptionModes": "None",
+                                          "WPAAuthenticationMode": "PSKAuthentication",
+                                          "WPAEncryptionModes": "TKIPEncryption",
+                                          "IEEE11iEncryptionModes": "AESEncryption",
+                                          "IEEE11iAuthenticationMode": "PSKAuthentication",
+                                          "mbssid_index": 5,
+                                          "mio_id": "ra5",
+                                          "wlan_port": "wifi_2G-2-na",
+                                          "av_iface_key": 8,
+                                          "WLANCli": {
+                                                "max_instance": 0
+                                          }
+                                    },
+                                    "3": {
+                                          "BeaconTypeHere": 0,
+                                          "BeaconTypevalue": "None",
+                                          "BasicAuthenticationMode": "None",
+                                          "BasicEncryptionModes": "None",
+                                          "WPAAuthenticationMode": "PSKAuthentication",
+                                          "WPAEncryptionModes": "TKIPEncryption",
+                                          "IEEE11iEncryptionModes": "AESEncryption",
+                                          "IEEE11iAuthenticationMode": "PSKAuthentication",
+                                          "mbssid_index": 0,
+                                          "mio_id": "rai0",
+                                          "wlan_port": "wifi_5G-1",
+                                          "av_iface_key": 9,
+                                          "WLANCli": {
+                                                "max_instance": 0
+                                          }
+                                    },
+                                    "4": {
+                                          "BeaconTypeHere": 0,
+                                          "BeaconTypevalue": "None",
+                                          "BasicAuthenticationMode": "None",
+                                          "BasicEncryptionModes": "None",
+                                          "WPAAuthenticationMode": "PSKAuthentication",
+                                          "WPAEncryptionModes": "TKIPEncryption",
+                                          "IEEE11iEncryptionModes": "AESEncryption",
+                                          "IEEE11iAuthenticationMode": "PSKAuthentication",
+                                          "mbssid_index": 5,
+                                          "mio_id": "rai5",
+                                          "wlan_port": "wifi_5G-2-na",
+                                          "av_iface_key": 10,
+                                          "WLANCli": {
+                                                "max_instance": 0
+                                          }
+                                    }
+                              }
+                        }
+                  },
+                  "route_17_33": {
+                        "max_instance": 5,
+                        "1": {
+                              "dest": "224.0.0.252",
+                              "mask": "255.255.255.255",
+                              "metric": 0,
+                              "gw": "0.0.0.0",
+                              "iface": "br0",
+                              "type": "ip",
+                              "static": false,
+                              "notavail": false
+                        },
+                        "2": {
+                              "dest": "224.0.0.251",
+                              "mask": "255.255.255.255",
+                              "metric": 0,
+                              "gw": "0.0.0.0",
+                              "iface": "br0",
+                              "type": "ip",
+                              "static": false,
+                              "notavail": false
+                        },
+                        "3": {
+                              "dest": "192.168.0.0",
+                              "mask": "255.255.255.0",
+                              "metric": 0,
+                              "gw": "0.0.0.0",
+                              "iface": "br0",
+                              "type": "ip",
+                              "static": false,
+                              "notavail": false
+                        },
+                        "4": {
+                              "dest": "fd01::/64",
+                              "mask": "",
+                              "metric": 256,
+                              "gw": "::",
+                              "iface": "br0",
+                              "type": "ipv6",
+                              "static": false,
+                              "notavail": false
+                        },
+                        "5": {
+                              "dest": "fd00::/8",
+                              "mask": "",
+                              "metric": 256,
+                              "gw": "::",
+                              "iface": "br0",
+                              "type": "ipv6",
+                              "static": false,
+                              "notavail": false
+                        }
+                  },
+                  "bridge": {
+                        "max_instance": 1,
+                        "1": {
+                              "BridgeEnable": true,
+                              "BridgeStatus": "Enabled",
+                              "BridgeStandard": "802.1D",
+                              "VLANID": null,
+                              "BridgeName": "wan",
+                              "BridgeKey": 1,
+                              "mio_id": "wan_0"
+                        }
+                  },
+                  "Marking": {
+                        "max_instance": 1,
+                        "1": {
+                              "MarkingInterface": "1",
+                              "MarkingBridgeReference": 1,
+                              "VLANIDMark": -1,
+                              "VLANIDUntag": true,
+                              "VLANIDMarkOverride": false,
+                              "EthernetPriorityMark": 0,
+                              "MarkingEnable": true,
+                              "MarkingStatus": "Enabled",
+                              "mio_id": "1_1_-1",
+                              "MarkingKey": 1
+                        }
+                  },
+                  "Filter": {
+                        "max_instance": 2,
+                        "1": {
+                              "FilterInterface": "1",
+                              "FilterBridgeReference": 1,
+                              "VLANIDFilter": -1,
+                              "AdmitOnlyVLANTagged": false,
+                              "FilterEnable": true,
+                              "FilterStatus": "Enabled",
+                              "mio_id": "1_1_-1",
+                              "FilterKey": 1
+                        },
+                        "2": {
+                              "FilterInterface": "11",
+                              "FilterBridgeReference": 1,
+                              "VLANIDFilter": -1,
+                              "AdmitOnlyVLANTagged": false,
+                              "FilterEnable": true,
+                              "FilterStatus": "Enabled",
+                              "mio_id": "11_1_-1",
+                              "FilterKey": 2
+                        }
+                  },
+                  "url_filter": {
+                        "max_instance": 0
+                  }
+            },
+            "notify": [],
+            "schedule_inform_time": "0",
+            "start_port": "9000"
+      },
+      "upnp": {
+            "enable": true
+      },
+      "urlfilter": {},
+      "vlan": {
+            "avail_ports": [
+                  "port5",
+                  "port1",
+                  "port2",
+                  "port3",
+                  "port4",
+                  "wifi_2G-1",
+                  "wifi_5G-1"
+            ],
+            "vlans": [
+                  {
+                        "dest": "lan",
+                        "en": true,
+                        "name": "lan",
+                        "permanent": true,
+                        "ports": {
+                              "port1": {
+                                    "qos": 0,
+                                    "tag": false
+                              },
+                              "port2": {
+                                    "qos": 0,
+                                    "tag": false
+                              },
+                              "port3": {
+                                    "qos": 0,
+                                    "tag": false
+                              },
+                              "port4": {
+                                    "qos": 0,
+                                    "tag": false
+                              },
+                              "wifi_2G-1": {
+                                    "qos": 0,
+                                    "tag": false
+                              },
+                              "wifi_5G-1": {
+                                    "qos": 0,
+                                    "tag": false
+                              }
+                        },
+                        "vid": null,
+                        "ifname": "br0"
+                  },
+                  {
+                        "dest": "wan",
+                        "en": true,
+                        "name": "wan",
+                        "ports": {
+                              "port5": {
+                                    "qos": 0,
+                                    "tag": false
+                              }
+                        },
+                        "vid": null,
+                        "ifname": "wan1",
+                        "phys_ifname": "wan1"
+                  }
+            ]
+      },
+      "vserver": [],
+      "wan_failover": {
+            "enable": false,
+            "failover_attempts": 1,
+            "icmp_host": "8.8.8.8",
+            "icmp_interval": 10,
+            "icmp_timeout": 3,
+            "master_iface": "",
+            "recovery_attempts": 1,
+            "slave_iface": ""
+      },
+      "wifi": {
+            "5G_BGProtection": "0",
+            "5G_BandWidth": "4",
+            "5G_BeaconPeriod": "100",
+            "5G_Channel": "auto",
+            "5G_DtimPeriod": "1",
+            "5G_FragThreshold": "2346",
+            "5G_HTGI": "enable",
+            "5G_HideSSID": false,
+            "5G_MaxStaNum": "0",
+            "5G_RADIUS_Key": "dlink",
+            "5G_RADIUS_Port": "1812",
+            "5G_RADIUS_Server": "192.168.0.254",
+            "5G_RTSThreshold": "2347",
+            "5G_RadioOff": true,
+            "5G_RekeyInterval": "3600",
+            "5G_RekeyMethod": "TIME",
+            "5G_StationKeepAlive": "0",
+            "5G_TxBeamforming": true,
+            "5G_TxPower": "100",
+            "5G_TxPreamble": "long",
+            "5G_WdsEnable": "0",
+            "5G_WifiBroadcast": true,
+            "5G_WirelessMode": "24",
+            "5G_mbssid": [
+                  {
+                        "AccessControlList": [],
+                        "AccessPolicy": "0",
+                        "AuthMode": "WPA2PSK",
+                        "DefaultKeyID": "2",
+                        "EncrypType": "AES",
+                        "IEEE8021X": "0",
+                        "Key1Str": "",
+                        "Key1Type": "1",
+                        "Key2Str": "",
+                        "Key2Type": "1",
+                        "Key3Str": "",
+                        "Key3Type": "1",
+                        "Key4Str": "",
+                        "Key4Type": "1",
+                        "MacFilterList": {
+                              "max_instance": 0
+                        },
+                        "NoForwarding": "0",
+                        "NoForwardingBTNBSSID": "0",
+                        "PreAuth": "0",
+                        "SSID": "Tarola 5G",
+                        "TxRate": "0",
+                        "WPAPSK": "Ferdinand",
+                        "WmmCapable": true,
+                        "WifiBroadcast": true,
+                        "RekeyMethod": "TIME",
+                        "RekeyInterval": "3600",
+                        "MaxStaNum": "0",
+                        "HideSSID": false,
+                        "Isolation": false,
+                        "GuestAccess": false
+                  }
+            ],
+            "APACM": "0;0;0;0",
+            "APAifsn": "3;7;1;1",
+            "APCwmax": "6;10;4;3",
+            "APCwmin": "4;5;3;2",
+            "APTxop": "0;0;94;47",
+            "AckPolicy": "0;0;0;0",
+            "ApCliAuthMode": "OPEN",
+            "ApCliBssid": "",
+            "ApCliDefaultKeyId": "",
+            "ApCliEnable": false,
+            "ApCliEncrypType": "",
+            "ApCliKey1Str": "",
+            "ApCliKey1Type": "",
+            "ApCliKey2Str": "",
+            "ApCliKey2Type": "",
+            "ApCliKey3Str": "",
+            "ApCliKey3Type": "",
+            "ApCliKey4Str": "",
+            "ApCliKey4Type": "",
+            "ApCliSsid": "",
+            "ApCliWPAPSK": "",
+            "BGProtection": "0",
+            "BSSACM": "0;0;0;0",
+            "BSSAifsn": "3;7;2;2",
+            "BSSCwmax": "10;10;4;3",
+            "BSSCwmin": "4;4;3;2",
+            "BSSTxop": "0;0;94;47",
+            "BandWidth": "3",
+            "BeaconPeriod": "100",
+            "Channel": "auto",
+            "CountryCode": "RU",
+            "DtimPeriod": "1",
+            "FragThreshold": "2346",
+            "HTGI": "enable",
+            "HideSSID": false,
+            "MaxStaNum": "0",
+            "RADIUS_Key": "dlink",
+            "RADIUS_Port": "1812",
+            "RADIUS_Server": "192.168.0.254",
+            "RTSThreshold": "2347",
+            "RadioOff": false,
+            "RekeyInterval": "3600",
+            "RekeyMethod": "TIME",
+            "StationKeepAlive": "0",
+            "TxPower": "100",
+            "TxPreamble": "long",
+            "Wds1EncrypType": "NONE",
+            "Wds1Key": "",
+            "Wds1Mac": "",
+            "Wds2EncrypType": "NONE",
+            "Wds2Key": "",
+            "Wds2Mac": "",
+            "Wds3EncrypType": "NONE",
+            "Wds3Key": "",
+            "Wds3Mac": "",
+            "Wds4EncrypType": "NONE",
+            "Wds4Key": "",
+            "Wds4Mac": "",
+            "WdsEnable": "0",
+            "WdsPhyMode": "",
+            "WifiBroadcast": true,
+            "WirelessMode": "9",
+            "WscConfMode": "0",
+            "WscConfigured": true,
+            "mbssid": [
+                  {
+                        "AccessControlList": [],
+                        "AccessPolicy": "0",
+                        "AuthMode": "WPA2PSK",
+                        "DefaultKeyID": "2",
+                        "EncrypType": "AES",
+                        "IEEE8021X": "0",
+                        "Key1Str": "",
+                        "Key1Type": "1",
+                        "Key2Str": "",
+                        "Key2Type": "1",
+                        "Key3Str": "",
+                        "Key3Type": "1",
+                        "Key4Str": "",
+                        "Key4Type": "1",
+                        "MacFilterList": {
+                              "max_instance": 0
+                        },
+                        "NoForwarding": "0",
+                        "NoForwardingBTNBSSID": "0",
+                        "PreAuth": "0",
+                        "SSID": "Tarola",
+                        "TxRate": "0",
+                        "WPAPSK": "Ferdinand",
+                        "WmmCapable": true,
+                        "WifiBroadcast": true,
+                        "RekeyMethod": "TIME",
+                        "RekeyInterval": "3600"
+                  }
+            ],
+            "session_timeout_interval": "0",
+            "WscDefaultPin": "54304802",
+            "Width": "40MHz",
+            "HTCoexistance": false,
+            "ExtensionChannel": "auto",
+            "5G_HTCoexistance": false,
+            "5G_ExtensionChannel": "auto",
+            "5G_Width": "80MHz",
+            "mbssidCurrent": 1,
+            "5G_mbssidCurrent": 1,
+            "ReselectAutoChannel": false,
+            "PeriodReselectChannel": 60,
+            "allowHighChannels": false,
+            "5G_ApCliBssid": "",
+            "5G_ApCliEnable": false,
+            "5G_ApCliAuthMode": "OPEN"
+      },
+      "passwd": [
+            {
+                  "login": "admin",
+                  "pass": "franz"
+            }
+      ],
+      "autoupdate": {
+            "enable": true,
+            "server": "fwupdate.dlink.ru",
+            "check_updates": false,
+            "need_update": false,
+            "status": "latest_fw_version",
+            "version": "3.0.2",
+            "md5sum": "e8c5c068013ea5680d4b258aee884168",
+            "path": "fwupdate.dlink.ru/Router/DIR_806A_MT7620A/Firmware/2021.08.04-17.59_DIR_806A_MT7620A_3.0.2_release.bin"
+      },
+      "roaming": {
+            "enable": false,
+            "quality_limit": 50,
+            "quality_limit_5g": 50,
+            "quality_width": 15,
+            "quality_width_5g": 15,
+            "max_timeout": 60,
+            "max_timeout_5g": 60,
+            "portno": 7890,
+            "mc_switch": false,
+            "mc_groupaddr": "239.255.0.0",
+            "mc_ttl": 32
+      },
+      "netfilter": {
+            "sip": false,
+            "rtsp": true
+      },
+      "pppoe_pass_through": {
+            "enabled": false,
+            "pptp": false,
+            "l2tp": false,
+            "ipsec": false
+      },
+      "lang": "rus",
+      "dns": {
+            "manual": true,
+            "servers": "8.8.8.8|",
+            "defroute": false
+      },
+      "dns6": {
+            "manual": true,
+            "servers": "2001:4860:4860::8888|",
+            "defroute": false
+      }
+}
